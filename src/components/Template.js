@@ -1,5 +1,6 @@
 import React from 'react'
-
+import SignupForm from './SignupForm'
+import LoginForm from './LoginForm'
 const Template = ({title,des1,des2,image,formtype,setIsLoggedIn}) => {
     
   return (
@@ -10,7 +11,7 @@ const Template = ({title,des1,des2,image,formtype,setIsLoggedIn}) => {
                 <span>{des1}</span>
                 <span> {des2}</span>
             </p>
-            {formtype==="signup"? (<SignupForm/>):(<LoginForm/>)}
+            {formtype==="signup"? (<SignupForm setIsLoggedIn={setIsLoggedIn}/>):(<LoginForm setIsLoggedIn={setIsLoggedIn}/>)}
             <div>
                 <div></div>
                 <p>OR</p>
